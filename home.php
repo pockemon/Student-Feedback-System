@@ -41,8 +41,8 @@ session_start();
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
 
-                   <li><a href="Login.php">Student</a></li>
-                   <li><a href="Faculty_login.php">Faculty</a></li>
+                   <li><a href="Login1.php">Student</a></li>
+                   <li><a href="Faculty_login1.php">Faculty</a></li>
                     <li><a href="admin">Admin</a></li>
                </ul>
            </li>

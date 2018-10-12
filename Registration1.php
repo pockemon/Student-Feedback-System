@@ -103,11 +103,11 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
           </li>
 
           <li style="color:#FFFFFF">
-              <a style="color:#FFFFFF" href="index.php?info=about"><i class="fa fa-home fa-fw"></i>About</a>
+              <a style="color:#FFFFFF" href="About1.php"><i class="fa fa-home fa-fw"></i>About</a>
           </li>
 
           <li style="color:#FFFFFF">
-              <a style="color:#FFFFFF" href="index.php?info=registration"><i class="fa fa-home fa-fw"></i>Registration</a>
+              <a style="color:#FFFFFF" href="Registration1.php"><i class="fa fa-home fa-fw"></i>Registration</a>
           </li>
 
           <li class="dropdown">
@@ -115,8 +115,8 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
 
-                   <li><a href="index.php?info=login">Student</a></li>
-                   <li><a href="index.php?info=faculty_login">Faculty</a></li>
+                   <li><a href="Login1.php">Student</a></li>
+                   <li><a href="Faculty_login1.php">Faculty</a></li>
                     <li><a href="admin">Admin</a></li>
                </ul>
            </li>
@@ -128,11 +128,11 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 		<!-- One -->
 			<div class="wrapper-style4" >
 					<header class="align-center">
-					  <h2 style="color:white; margin-top: 30px">Registration Form</h2>
+					  <h2 style="color:white; margin-top: 20px">Registration Form</h2>
 					</header>
 			</div>
 
-    <div class="signup-form" style="padding: 50px 50px 50px 300px ">
+    <div class="signup-form" style="padding: 10px 50px 50px 300px ">
     <div class="main-div">
       <div class="panel panel-default" style="padding: 30px 25px" >
       <!-- <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center; color:#ffffff">Student Signup</h2> -->
