@@ -1,4 +1,4 @@
-<?php 
+<?php
 extract($_POST);
 if(isset($sub))
 {
@@ -26,7 +26,7 @@ echo "<h2 style='color:green'>Thank you </h2>";
 <form method="post">
 <fieldset>
 <center><u>Student's FeedBack Form</u></center><br>
- 
+
 <fieldset>
 
 
@@ -62,16 +62,16 @@ $sql=mysqli_query($conn,"select * from faculty where semester='".$users['semeste
 <h3>1-Course Material</h3>
 <table class="table table-bordered">
 <tr>
-<td><b>1:</b> Teacher provided the course outline having weekly content plan with list of  required text book:</td>  
+<td><b>1:</b> Teacher provided the course outline having weekly content plan with list of  required text book:</td>
 <td><input type="radio" name="quest1" value="5" required> 5
   <input type="radio" name="quest1" value="4">4
   <input type="radio" name="quest1" value="3"> 3
 <input type="radio" name=" quest1" value="2">2
 <input type="radio" name="quest1" value="1">1</td>
 </tr>
-  
+
 <tr>
-<td><b>2:</b>Course objectives,learning outcomes and grading criteria are clear to me:</td> 
+<td><b>2:</b>Course objectives,learning outcomes and grading criteria are clear to me:</td>
 <td><input type="radio" name="quest2" value="5" required>5
   <input type="radio" name="quest2" value="4">4
   <input type="radio" name="quest2" value="3">3
@@ -81,7 +81,7 @@ $sql=mysqli_query($conn,"select * from faculty where semester='".$users['semeste
 
 <tr>
 <td>
-<b>3:</b>Course integrates throretical course concepts with the real world examples:</td> 
+<b>3:</b>Course integrates throretical course concepts with the real world examples:</td>
 <td>
 <input type="radio" name="quest3" value="5" required> 5
   <input type="radio" name="quest3" value="4">4
@@ -104,7 +104,7 @@ $sql=mysqli_query($conn,"select * from faculty where semester='".$users['semeste
 <tr>
 <td>
 <b>5:</b> Teacher is good at stimulating the interest in the course content:</td>
-<td> 
+<td>
 <input type="radio" name="quest5" value="5" required> 5
 <input type="radio" name="quest5" value="4">4
   <input type="radio" name="quest5" value="3"> 3
@@ -130,7 +130,7 @@ $sql=mysqli_query($conn,"select * from faculty where semester='".$users['semeste
 <input type="radio" name="quest7" value="1">1</td>
 <tr>
 <td>
-<b>8:</b> Teacher is good at using innovative teaching methods/ways:</td><td> 
+<b>8:</b> Teacher is good at using innovative teaching methods/ways:</td><td>
 <input type="radio" name="quest8" value="5" required> 5
   <input type="radio" name="quest8" value="4">4
   <input type="radio" name="quest8" value="3">3
@@ -139,7 +139,7 @@ $sql=mysqli_query($conn,"select * from faculty where semester='".$users['semeste
 </tr>
 <tr>
 <td>
-<b>9:</b> Teacher is available and helpful during counseling hours:</td> 
+<b>9:</b> Teacher is available and helpful during counseling hours:</td>
 <td><input type="radio" name="quest9" value="5" required>5
   <input type="radio" name="quest9" value="4">4
   <input type="radio" name="quest9" value="3"> 3
@@ -202,11 +202,11 @@ $sql=mysqli_query($conn,"select * from faculty where semester='".$users['semeste
 <a href="About.php"><p align="right"><button type="Button" style="font-size:7pt;color:white;background-color:green;border:2px solid #336600;padding:7px">Back</button></p></a>-->
 
 </div><!--close content_item-->
-      </div><!--close content-->   
-	
-	</div><!--close site_content-->  	
-  
-    
+      </div><!--close content-->
+
+	</div><!--close site_content-->
+
+
     </div><!--close main-->
   </form>
 <center>

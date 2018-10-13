@@ -51,7 +51,9 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 
 <html>
 	<head>
-		<title>Online Feedback System</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Faculty Feedback System</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main_reg.css">
