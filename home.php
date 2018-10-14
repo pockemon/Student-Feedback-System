@@ -45,7 +45,7 @@ session_start();
 
                    <li><a href="Login1.php">Student</a></li>
                    <li><a href="Faculty_login1.php">Faculty</a></li>
-                    <li><a href="admin">Admin</a></li>
+                    <li><a href="admin_login.php">Admin</a></li>
                </ul>
            </li>
 

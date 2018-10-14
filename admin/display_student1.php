@@ -1,14 +1,18 @@
-<?php
-session_start();
-if(!isset($_SESSION['user']))
+<script type="text/javascript">
+function deletes(id)
 {
-header('location: home.php');
+	a=confirm('Are You Sure To Remove This Record ?')
+	 if(a)
+     {
+        window.location.href='delete_student.php?id='+id;
+     }
 }
+</script>
+
+<?php
+error_reporting(1);
 include('../dbconfig.php');
-
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -45,10 +49,19 @@ include('../dbconfig.php');
 
     <style>
 
-      .main-panel{
+      .wrapper{
         background-image: url('assets/img/dbbg4.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
+
+      }
+
+      .panel-default
+      {
+        background-color: white;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 10px 10px;
 
       }
 
@@ -60,6 +73,8 @@ include('../dbconfig.php');
 
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+            <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
 
             <div class="sidebar-wrapper">
@@ -134,77 +149,116 @@ include('../dbconfig.php');
         </div>
 
         <div class="main-panel">
-            <nav class="navbar navbar-inverse navbar-fixed">
+          <nav class="navbar navbar-inverse navbar-fixed">
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                      <a class="navbar-brand" href="#">Dashboard</a>
+                  </div>
+                  <div class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav navbar-left">
+                          <li>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-dashboard"></i>
+                                  <p class="hidden-lg hidden-md">Dashboard</p>
+                              </a>
+                          </li>
+
+
+                      </ul>
+
+                      <ul class="nav navbar-nav navbar-right">
+
+                          <li>
+                              <a href="logout.php">
+                                  <p>Log out</p>
+                              </a>
+                          </li>
+                          <li class="separator hidden-lg"></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+          <form method="post" style="margin-top: 80px">
+            <div style="color: red "><?php
+
+              echo @$err;
+
+                ?>
+            <div class="content" >
                 <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                        <a class="navbar-brand" href="#">Dashboard</a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-dashboard"></i>
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
-
-
-                        </ul>
-
-                        <ul class="nav navbar-nav navbar-right">
-
-                            <li>
-                                <a href="logout.php">
-                                    <p>Log out</p>
-                                </a>
-                            </li>
-                            <li class="separator hidden-lg"></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
-            <div class="content" style="">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="col-md-3">
-
-                        </div>
-
-                        <div class="col-md-5">
+                    <div class="row panel panel-default" style="width: 1200px">
+                        <div class="col-md-12">
                             <div class="card">
+                                <div class="header">
+                                    <h4 class="title" style="color:orange">Manage Students</h4>
+                                </div>
+                                <div class="content">
 
-                                   <h1>Hello Admin </h3>
+                                        <div class="row">
 
-                                    <hr>
-                                    <h3>Welcome to your dashboard </h3>
+                                          <?php
+
+                                          	echo "<table class='table table-responsive table-bordered table-striped table-hover' style=margin:15px;>";
+                                          	echo "<tr class='success'>";
+
+                                          	echo "<th>S.No</th>";
+                                          	echo "<th>Name</th>";
+                                          	echo "<th>Email</th>";
+                                          	echo "<th>Mobile</th>";
+                                          	echo "<th>Programme</th>";
+                                          	echo "<th>Semester</th>";
+                                          	echo "<th>Regid Id</th>";
+                                          	echo "<th>Delete</th>";
+                                          	echo "</tr>";
+
+                                          	$i=1;
+                                          	$que=mysqli_query($conn,"select * from user");
+
+                                          	while($row=mysqli_fetch_array($que))
+                                          	{
+                                          		echo "<tr>";
+                                          		echo "<td>".$i."</td>";
+                                          		echo "<td>".$row['name']."</td>";
+                                          		echo "<td>".$row['email']."</td>";
+                                          		echo "<td>".$row['mobile']."</td>";
+                                          		echo "<td>".$row['programme']."</td>";
+                                          		echo "<td>".$row['semester']."</td>";
+                                          		echo "<td>".$row['regid']."</td>";
+
+
+                                              echo "<td class='text-center'><a href='#' onclick='deletes($row[id])'><i class='pe-7s-close' style='color:red'></i></span></a></td>";
+
+                                          		echo "</tr>";
+                                          		$i++;
+                                          	}
+
+                                          ?>
+
+
+                                        </div>
 
                             </div>
                         </div>
+                      </div>
 
-                        <div class="col-md-4">
-
-                        </div>
-
-
-                    </div>
                 </div>
-
-
-
-
-
             </div>
+          </div>
+
+        </form>
+
+
+
         </div>
     </div>
+
 
 </body>
 
@@ -226,7 +280,5 @@ include('../dbconfig.php');
 
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
-
-
 
 </html>

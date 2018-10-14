@@ -1,38 +1,22 @@
 <?php
-session_start();
+ session_start();
  require('dbconfig.php');
 
- extract($_POST);
- if(isset($save))
- {
-
- 	if($e=="" || $p=="")
- 	{
- 	$err="<font color='red'>fill all the fileds first</font>";
- 	}
- 	else
- 	{
- $pass=md5($p);
-
- $sql=mysqli_query($conn,"select * from user where email='$e' and pass='$pass'");
-
- $r=mysqli_num_rows($sql);
-
- if($r==true)
- {
- $_SESSION['user']=$e;
- header('location:user');
- }
-
- else
- {
-
- $err="<font color='red'>Invalid login details</font>";
-
- }
- }
- }
-
+	extract($_POST);
+	if(isset($login))
+	{
+$que=mysqli_query($conn,"select user and pass from admin where user='$email' and pass='$pass'");
+		$row=mysqli_num_rows($que);
+		if($row)
+			{
+				$_SESSION['user']=$email;
+				header('location: admin');
+			}
+		else
+			{
+				$err="<font color='red'>Wrong Email or Password !</font>";
+			}
+	}
 ?>
 
 <!DOCTYPE HTML>
@@ -41,7 +25,7 @@ session_start();
 	<head>
     <link rel="icon" type="image/png" href="images/favicon.ico">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>Faculty Feedback System</title>
+		<title>Online Feedback System</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main_reg.css">
@@ -107,7 +91,7 @@ session_start();
 
                  <li><a href="Login1.php">Student</a></li>
                  <li><a href="Faculty_login1.php">Faculty</a></li>
-                 <li><a href="admin_login.php">Admin</a></li>
+                  <li><a href="admin_login.php">Admin</a></li>
              </ul>
          </li>
 
@@ -118,7 +102,7 @@ session_start();
 		<!-- One -->
 			<div class="wrapper-style4" >
 					<header class="align-center">
-					  <h2 style="color:white; margin-top: 40px; font-size: 40px">Student Login </h2>
+            <h2 style="color:white; margin-top: 40px; font-size: 40px">Admin Login </h2>
 					</header>
 			</div>
 
@@ -136,16 +120,16 @@ session_start();
 
 
            <div class="form-group">
-               <input type="email" class="form-control" id="inputEmail" style="color:white;font-size: 16px" placeholder="Email Address" name="e" required>
+               <input type="email" class="form-control" id="inputEmail" style="color:white;font-size: 16px" placeholder="Email Address" name="email" required>
             </div>
 
 
             <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" style="color:whit;font-size: 16px" placeholder="Password" name="p" required>
+                <input type="password" class="form-control" id="inputPassword" style="color:whit;font-size: 16px" placeholder="Password" name="pass" required>
             </div>
 
 
-						<input type="submit" value="Login" class="btn btn-info" style=" background-color: #0066ff"  name="save"/>
+						<input type="submit" value="Login" class="btn btn-info" style=" background-color: #0066ff"  name="login"/>
 
 
         </form>
