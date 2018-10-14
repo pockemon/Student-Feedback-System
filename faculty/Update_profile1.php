@@ -1,49 +1,22 @@
 <?php
 session_start();
 include('../dbconfig.php');
-$user= $_SESSION['user'];
-if($user=="")
-{header('location:../index.php');}
-$sql=mysqli_query($conn,"select * from user where email='$user' ");
-$users=mysqli_fetch_assoc($sql);
-//print_r($users);
-?>
 
-<?php
+	extract($_POST);
+	if(isset($save))
+	{
 
-extract($_POST);
-if(isset($update))
-{
+	mysqli_query($conn,"update faculty set Name='$n',designation	='$desg',programme='$prg',semester='$sem',mobile='$mob',	password='$pass' where email='".$_SESSION['faculty_login']."'");
 
-$n = $_POST["n"];
-$e = $_POST["e"];
-$mob = $_POST["mob"];
-$pro = $_POST["pro"];
-$sem = $_POST["sem"];
-$gen = $_POST["gen"];
-$dob = $_POST["dob"];
-
-//$imageName = $_FILES['img']['name'];
-
-$query="update user set name='$n',email='$e',mobile='$mob',programme='$pro',semester='$sem',gender='$gen',dob='$dob' where email='".$_SESSION['user']."'";
-
-//$query="insert into user values('','$n','$e','$pass','$mob','$gen','$hob','$imageName','$dob',now())";
-mysqli_query($conn,$query);
-
-
-
-$err="<font color='red'>Profie updated successfully !!</font>";
-
+$err="<font color='green'>Faculty Details updated</font>";
 
 }
 
+$con=mysqli_query($conn,"select * from faculty where email='".$_SESSION['faculty_login']."'");
 
-//select old data
-//check user alereay exists or not
-$sql=mysqli_query($conn,"select * from user where email='".$_SESSION['user']."'");
-$res=mysqli_fetch_assoc($sql);
-
- ?>
+$users=mysqli_fetch_assoc($con);
+//print_r($res);
+?>
 
 <!doctype html>
 <html lang="en">
@@ -111,9 +84,9 @@ $res=mysqli_fetch_assoc($sql);
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="#" class="simple-text">
-                        Hello <?php echo $users['name'];?>
+                        Hello <?php echo $users['Name'];?>
                 </a>
-                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $users['image'] ).'" style="width:200px;height:180px;border-radius:50%"/>'; ?>
+                <img src="images_f/f1.jpeg" style="width:200px;height:180px;border-radius:50%">
 
                 </div>
 
@@ -125,22 +98,16 @@ $res=mysqli_fetch_assoc($sql);
                         </a>
                     </li>
                     <li>
-                        <a href="update_profile1.php">
+                        <a href="Update_profile1.php">
                             <i class="pe-7s-user"></i>
-                            <p>User Profile</p>
+                            <p>Update Profile</p>
                         </a>
                     </li>
 
-                    <li>
-                          <a href="update_password1.php">
-                             <i class="pe-7s-lock"></i>
-                             <p>Update Password </p>
-                          </a>
 
-                    </li>
 
                     <li>
-                              <a href="give_feedback1.php">
+                              <a href="Feedback1.php">
                                  <i class="pe-7s-like2"></i>
                                  <p>Feedback</p>
                                </a>
@@ -177,29 +144,7 @@ $res=mysqli_fetch_assoc($sql);
                       </ul>
 
                       <ul class="nav navbar-nav navbar-right">
-                          <li>
-                              <a href="">
-                                  <p>Account</p>
-                              </a>
-                          </li>
-                          <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <p>
-                                      Dropdown
-                                      <b class="caret"></b>
-                                  </p>
 
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li><a href="#">Action</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something</a></li>
-                                  <li class="divider"></li>
-                                  <li><a href="#">Separated link</a></li>
-                              </ul>
-                          </li>
                           <li>
                               <a href="logout.php">
                                   <p>Log out</p>
@@ -232,17 +177,24 @@ $res=mysqli_fetch_assoc($sql);
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label><b> Name </b></label>
-                                                    <input type="text" class="form-control" placeholder="Username" value="<?php echo $users['name'];?>" name="n">
+                                                    <input type="text" class="form-control" placeholder="Username" value="<?php echo $users['Name'];?>" name="n">
                                                 </div>
                                             </div>
-
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" placeholder="email" value="<?php echo $users['email'];?>" name="e">
+                                                    <label> Designation </label>
+                                                    <input type="text" class="form-control" placeholder="Designation" value="<?php echo $users['designation'];?>" name="desg">
                                                 </div>
                                             </div>
+                                        </div>
 
+                                        <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="form-group">
+                                                  <label>Email address</label>
+                                                  <input type="email" class="form-control" placeholder="email" readonly="true" value="<?php echo $users['email'];?>" name="e">
+                                              </div>
+                                          </div>
                                         </div>
 
                                         <div class="row">
@@ -255,10 +207,10 @@ $res=mysqli_fetch_assoc($sql);
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-5">
                                                 <div class="form-group">
                                                   <label>Program</label>
-                                                  <select class="form-control" id="inputProgram" style="font-size: 16px" placeholder="Program" name="pro">
+                                                  <select class="form-control" id="inputProgram" style="font-size: 16px" placeholder="Program" name="prg">
 
                                                     <option selected="selected"><?php echo $users['programme'];?></option>
                                                     <option style="color:black">MCA</option>
@@ -270,7 +222,7 @@ $res=mysqli_fetch_assoc($sql);
 
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-5">
                                                 <div class="form-group">
 
                                                   <label>Semester</label>
@@ -290,29 +242,15 @@ $res=mysqli_fetch_assoc($sql);
 
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
 
-                                                  <label>Gender</label>
-
-                                                  <select class="form-control" id="inputGender" style="font-size: 16px" placeholder="Gender" name="gen" value="<?php echo $users['gender'];?>">
-
-                                                    <option selected="selected"><?php echo $users['gender'];?></option>
-                                                    <option style="color:black">Male</option>
-                                                    <option style="color:black">Female</option>
-
-                                                  </select>
-
-                                                </div>
-                                            </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
 
-                                                    <label>Date of birth</label>
-                                                    <input type="date" class="form-control" id="inputDate" style="font-size: 16px" placeholder="date" value="<?php echo $users['dob'];?>" name="dob">
+                                                    <label>Password</label>
+                                                    <input type="text" class="form-control" id="inputDate" style="font-size: 16px" placeholder="password" value="<?php echo @$users['password'];?>"  name="pass"  required>
 
                                                 </div>
                                             </div>
@@ -326,7 +264,8 @@ $res=mysqli_fetch_assoc($sql);
 
                         <div class="col-md-4" style="margin-top: 20px">
 
-                          <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $users['image'] ).'" style="width:300px;height:300px"/>'; ?>
+                          <img src="images_f/f1.jpeg" style="width:300px;height:300px"/>
+
                           <br>
                           <br>
 
@@ -339,7 +278,7 @@ $res=mysqli_fetch_assoc($sql);
 
                         </div>
 
-                        <input type="submit" class="btn btn-warning" value="Update My Profile" name="update"/>
+                        <input type="submit" class="btn btn-success" name="save" value="Update  Profile">
                         <input type="reset" class="btn btn-info" value="Reset"/>
 
                 </div>
