@@ -17,10 +17,8 @@ $q=mysqli_query($conn,"select * from feedback where faculty_id='".$_SESSION['fac
 $r=mysqli_num_rows($q);
 if($r==false)
 {
-echo "<h3 style='color:Red'>No any records found ! </h3>";
+echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
 }
-else
-{
 
 ?>
 
@@ -276,4 +274,3 @@ else
 <script src="assets/js/demo.js"></script>
 
 </html>
-<?php } ?>

@@ -196,6 +196,45 @@ include('../dbconfig.php');
 
 
                     </div>
+
+                    <div class="row">
+
+                      <div class="col-md-3">
+
+                      </div>
+
+                      <div class="col-md-5">
+                          <div class="card">
+
+
+                      <?php
+                      //all complaints
+                      $qq=mysqli_query($conn,"select * from faculty ");
+                      $rows=mysqli_num_rows($qq);
+                      echo "<h2 style='color: #00ff00'>Total Number of Faculty : $rows</h2>";
+
+                      //all emegency compalints
+                      $q=mysqli_query($conn,"select * from user");
+                      $r1=mysqli_num_rows($q);
+                      echo "<h2 style='color:orange'>Total Number of Student : $r1</h2>";
+
+
+                      //all users
+                      $q2=mysqli_query($conn,"select * from feedback");
+                      $r2=mysqli_num_rows($q2);
+                      echo "<h2 style='color:black'>Total Number feedback given by users  : $r2</h2>";
+
+
+
+
+                      ?>
+
+
+                                                  </div>
+                                              </div>
+
+
+                    </div>
                 </div>
 
 

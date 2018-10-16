@@ -80,7 +80,7 @@ else
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" style="width: 2000px">
         <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 
             <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
@@ -178,18 +178,16 @@ else
                               </a>
                           </li>
 
+													<li>
+															<a href="logout.php">
+																	<p>Log out</p>
+															</a>
+													</li>
+
 
                       </ul>
 
-                      <ul class="nav navbar-nav navbar-right">
 
-                          <li>
-                              <a href="logout.php">
-                                  <p>Log out</p>
-                              </a>
-                          </li>
-                          <li class="separator hidden-lg"></li>
-                      </ul>
                   </div>
               </div>
           </nav>
@@ -202,7 +200,7 @@ else
                 ?>
             <div class="content" >
                 <div class="container-fluid">
-                    <div class="row panel panel-default" style="width: 1400px">
+                    <div class="row panel panel-default" style="width: 1600px">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="header">
