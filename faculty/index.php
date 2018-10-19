@@ -7,7 +7,7 @@ error_reporting(1);
 
 $user= $_SESSION['faculty_login'];
 if($user=="")
-{header('location:../index.php');}
+{header('location:../home.php');}
 $sql=mysqli_query($conn,"select * from faculty where email='$user' ");
 $users=mysqli_fetch_assoc($sql);
 ?>

@@ -1,6 +1,10 @@
 <?php
-error_reporting(1);
-	include('../dbconfig.php');
+include('../dbconfig.php');
+
+$user= $_SESSION['user'];
+if($user=="")
+{header('location:../home.php');}
+
 	extract($_POST);
 	if(isset($save))
 	{

@@ -2,9 +2,11 @@
 <?php
 session_start();
 include('../dbconfig.php');
+
 $user= $_SESSION['user'];
 if($user=="")
-{header('location:../index.php');}
+{header('location:../home.php');}
+
 $sql=mysqli_query($conn,"select * from user where email='$user' ");
 $users=mysqli_fetch_assoc($sql);
 //print_r($users);

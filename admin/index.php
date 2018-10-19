@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION['user']))
-{
-header('location: home.php');
-}
+
 include('../dbconfig.php');
+
+if(!isset($_SESSION['user']))
+{header('location:../home.php');}
 
 ?>
 

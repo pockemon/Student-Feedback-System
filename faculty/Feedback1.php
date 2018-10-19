@@ -5,7 +5,7 @@ error_reporting(1);
 
 $user= $_SESSION['faculty_login'];
 if($user=="")
-{header('location:../index.php');}
+{header('location:../home.php');}
 $sql=mysqli_query($conn,"select * from faculty where email='$user' ");
 $users=mysqli_fetch_assoc($sql);
 ?>
@@ -210,7 +210,7 @@ echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
                                           		{
                                           			echo "<tr style='color:black'>";
                                           			echo "<td style='color:black'>".$i."</td>";
-                                          			echo "<td>".$row[1]."</td>";
+                                          			echo "<td>".Anonymous."</td>";
                                           			echo "<td>".$row[2]."</td>";
                                           			echo "<td>".$row[3]."</td>";
                                           			echo "<td>".$row[4]."</td>";

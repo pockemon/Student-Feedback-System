@@ -4,6 +4,10 @@
   include('../dbconfig.php');
 
   extract($_POST);
+
+  if(!isset($_SESSION['user']))
+  	{header('location:../home.php');}
+
   if(isset($save))
   {
 

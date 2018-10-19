@@ -3,6 +3,11 @@ session_start();
 include('../dbconfig.php');
 
 	extract($_POST);
+
+	$user= $_SESSION['faculty_login'];
+	if($user=="")
+	{header('location:../home.php');}
+	
 	if(isset($save))
 	{
 
