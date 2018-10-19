@@ -81,7 +81,7 @@ $res=mysqli_fetch_assoc($sql);
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+          background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 

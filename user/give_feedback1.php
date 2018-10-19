@@ -70,7 +70,7 @@ echo "<center><h2 style='color:green'>Thank you for your feedback</h2></center>"
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
