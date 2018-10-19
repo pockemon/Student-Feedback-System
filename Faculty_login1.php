@@ -61,7 +61,7 @@ session_start();
       width: 100%;
       color: #bfbfbf;
       background-size: cover;
-      background: url("images/pic04.jpg");
+      background: url("images/blur10.jpg");
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -123,7 +123,7 @@ session_start();
 
     <div class="signup-form" style="padding: 10px 50px 50px 300px ">
     <div class="main-div">
-      <div class="panel panel-default" style="padding: 30px 25px" >
+      <div class="panel panel-default" style="padding: 50px 20px" >
       <!-- <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center; color:#ffffff">Student Signup</h2> -->
        <form id="signup" method="post">
            <div style="color: red "><?php
@@ -140,7 +140,7 @@ session_start();
 
 
             <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" style="color:whit;font-size: 16px" placeholder="Password" name="p" required>
+                <input type="password" class="form-control" id="inputPassword" style="color:white;font-size: 16px" placeholder="Password" name="p" required>
             </div>
 
 

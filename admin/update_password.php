@@ -1,10 +1,10 @@
 <?php
 extract($_POST);
 include('../dbconfig.php');
-
+/*
 if(!isset($_SESSION['user']))
 	{header('location:../home.php');}
-
+*/
 if(isset($update_password))
 {
 

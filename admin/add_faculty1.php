@@ -1,10 +1,10 @@
 <?php
 include('../dbconfig.php');
-
+/*
 $user= $_SESSION['user'];
 if($user=="")
 {header('location:../home.php');}
-
+*/
 	extract($_POST);
 	if(isset($save))
 	{
@@ -29,11 +29,13 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
 	{
 		mysqli_query($conn,"insert into faculty values('','$user_name','$name','$Designation','$prg','$sem','$email','$pass','$mob',now(),'0')");
 
+ /*
 	$subject ="New User Account Creation";
 	$from="info@phptpoint.com";
 	$message ="User name: ".$user_name." Password ".$pass;
     $headers = "From:".$from;
     mail($email,$subject,$message,$headers);
+		*/
 
 	$err="<font color='green'><center>New Faculty Successfully Added.</center></font>";
 	}

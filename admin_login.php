@@ -46,7 +46,7 @@ $que=mysqli_query($conn,"select user and pass from admin where user='$email' and
       width: 100%;
       color: #bfbfbf;
       background-size: cover;
-      background: url("images/pic04.jpg");
+      background: url("images/blur10.jpg");
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -108,7 +108,7 @@ $que=mysqli_query($conn,"select user and pass from admin where user='$email' and
 
     <div class="signup-form" style="padding: 10px 50px 50px 300px ">
     <div class="main-div">
-      <div class="panel panel-default" style="padding: 30px 25px" >
+      <div class="panel panel-default" style="padding: 50px 20px" >
       <!-- <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center; color:#ffffff">Student Signup</h2> -->
        <form id="signup" method="post">
            <div style="color: red "><?php

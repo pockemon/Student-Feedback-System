@@ -57,7 +57,7 @@ session_start();
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
-					<img src="images/slide01.jpg" alt="" />
+					<img src="images/image2.jpg" alt="" / style="height:500px">
 					<div class="inner">
 						<header>
 							<p>A free responsive web site template by <a href="https://templated.co">TEMPLATED</a></p>
@@ -66,7 +66,7 @@ session_start();
 					</div>
 				</article>
 				<article>
-					<img src="images/slide02.jpg" alt="" />
+					<img src="images/image1.jpg" alt="" />
 					<div class="inner">
 						<header>
 							<p>Lorem ipsum dolor sit amet nullam feugiat</p>
@@ -75,7 +75,7 @@ session_start();
 					</div>
 				</article>
 				<article>
-					<img src="images/slide03.jpg"  alt="" />
+					<img src="images/image4.jpg"  alt="" />
 					<div class="inner">
 						<header>
 							<p>Sed cursus aliuam veroeros lorem ipsum nullam</p>
@@ -83,24 +83,7 @@ session_start();
 						</header>
 					</div>
 				</article>
-				<article>
-					<img src="images/slide04.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>Adipiscing lorem ipsum feugiat sed phasellus consequat</p>
-							<h2>Etiam feugiat</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/slide05.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>Ipsum dolor sed magna veroeros lorem ipsum</p>
-							<h2>Lorem adipiscing</h2>
-						</header>
-					</div>
-				</article>
+
 			</section>
 
 

@@ -12,9 +12,10 @@ function deletes(id)
 <?php
 error_reporting(1);
 include('../dbconfig.php');
-
+/*
 if(!isset($_SESSION['user']))
 	{header('location:../home.php');}
+	*/
 	?>
 
 <!doctype html>

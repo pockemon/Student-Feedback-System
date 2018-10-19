@@ -74,7 +74,7 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
       width: 100%;
       color: #bfbfbf;
       background-size: cover;
-      background: url("images/pic04.jpg");
+      background: url("images/blur2.jpg");
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -83,6 +83,12 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 			input[type="radio"]{
     -webkit-appearance: radio;
     }
+
+    input::placeholder {
+
+    font-size: 1.2em;
+   }
+
     </style>
 	</head>
 
@@ -134,9 +140,9 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 					</header>
 			</div>
 
-    <div class="signup-form" style="padding: 10px 50px 50px 300px ">
+    <div class="signup-form" style="padding: 10px 50px 50px 300px">
     <div class="main-div">
-      <div class="panel panel-default" style="padding: 30px 25px" >
+      <div class="panel panel-default" style="padding: 30px 25px">
       <!-- <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center; color:#ffffff">Student Signup</h2> -->
        <form id="signup" method="post" enctype="multipart/form-data">
            <div style="color: red "><?php
@@ -145,20 +151,20 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 
                ?>
            </div>
-          <div class="form-group" >
-              <input type="Name" class="form-control" id="inputName" style="color:white;font-size: 16px" placeholder="Name" name="n" required>
+          <div class="form-group">
+              <input type="Name" class="form-control" id="inputName" style="color:white; font-size: 1.2em" placeholder="Name" name="n" required>
           </div>
 
            <div class="form-group">
-               <input type="email" class="form-control" id="inputEmail" style="color:white;font-size: 16px" placeholder="Email Address" name="e" required>
+               <input type="email" class="form-control" id="inputEmail" style="color:white;font-size: 1.2em" placeholder="Email Address" name="e" required>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" id="inputMob" style="color:white;font-size: 16px" placeholder="Mobile Number" name="mob" required>
+                <input type="text" class="form-control" id="inputMob" style="color:white;font-size: 1.2em" placeholder="Mobile Number" name="mob" required>
             </div>
 
             <div class="form-group">
-                <select class="form-control" id="inputProgram" style="color:white;font-size: 16px;background-color: transparent" placeholder="Program" name="pro" required>
+                <select class="form-control" id="inputProgram" style="color:white;font-size: 1.2em;background-color: transparent" placeholder="Program" name="pro" required>
 
 									<option value="" disabled selected>Program</option>
 									<option style="color:black">MCA</option>
@@ -171,7 +177,7 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
             </div>
 
 						<div class="form-group">
-								<select class="form-control" id="inputSemester" style="font-size: 16px;background-color: transparent; color:white" placeholder="Semester" name="sem" required>
+								<select class="form-control" id="inputSemester" style="font-size: 1.2em;background-color: transparent; color:white" placeholder="Semester" name="sem" required>
 
                   <option value="" disabled selected>Semster</option>
 									<option style="color:black">i</option>
@@ -188,7 +194,7 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 
 						<div class="form-group">
 
-							<select class="form-control" id="inputGender" style="color:white;font-size: 16px;background-color: transparent" placeholder="Gender" name="gen" required>
+							<select class="form-control" id="inputGender" style="color:white;font-size: 1.2em;background-color: transparent" placeholder="Gender" name="gen" required>
 
                 <option value="" disabled selected>Gender</option>
 								<option style="color:black">Male</option>
@@ -200,19 +206,19 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 
 							<div class="form-group">
 
-								<input type="file" class="form-control" id="inputImage" style="color:white;font-size: 16px; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="img" required>
+								<input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="img" required>
 
 
 							</div>
 
 							  <div class="form-group">
 
-                      <input type="date" class="form-control" id="inputDate" style="color:white;font-size: 16px" placeholder="Birth-Date" name="yy" required >
+                      <input type="date" class="form-control" id="inputDate" style="color:white;font-size: 1.2em" placeholder="Birth-Date" name="yy" required >
 
 							  </div>
 
             <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" style="color:whit;font-size: 16px" placeholder="Password" name="p" required>
+                <input type="password" class="form-control" id="inputPassword" style="color:white;font-size: 1.2em" placeholder="Password" name="p" required>
             </div>
 
 
