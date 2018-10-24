@@ -20,7 +20,7 @@ $r=mysqli_num_rows($sql);
 
 if($r==true)
 {
-echo "<center><h2 style='color:red'>You already given feedback to this faculty</h2><center>";
+echo "<font color='blue' size='5px'><center>You already given feedback to this faculty</center></font>";
 }
 else
 {
@@ -28,7 +28,7 @@ $query="insert into feedback values('','$user','$faculty','$quest1','$quest2','$
 
 mysqli_query($conn,$query);
 
-echo "<center><h2 style='color:green'>Thank you for your feedback</h2></center>";
+echo "<font color='blue' size='5px'><center>Thank you for your feedback</h2></center></font>";
 }
 }
 
@@ -116,7 +116,7 @@ echo "<center><h2 style='color:green'>Thank you for your feedback</h2></center>"
                     <li>
                         <a href="update_profile1.php">
                             <i class="pe-7s-user"></i>
-                            <p>User Profile</p>
+                            <p>View/Edit Profile</p>
                         </a>
                     </li>
 
@@ -166,29 +166,7 @@ echo "<center><h2 style='color:green'>Thank you for your feedback</h2></center>"
                       </ul>
 
                       <ul class="nav navbar-nav navbar-right">
-                          <li>
-                              <a href="">
-                                  <p>Account</p>
-                              </a>
-                          </li>
-                          <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <p>
-                                      Dropdown
-                                      <b class="caret"></b>
-                                  </p>
 
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li><a href="#">Action</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something</a></li>
-                                  <li class="divider"></li>
-                                  <li><a href="#">Separated link</a></li>
-                              </ul>
-                          </li>
                           <li>
                               <a href="logout.php">
                                   <p>Log out</p>
@@ -200,7 +178,6 @@ echo "<center><h2 style='color:green'>Thank you for your feedback</h2></center>"
               </div>
           </nav>
 
-          <
 
           <form method="post">
             <div style="color: red "><?php
@@ -208,19 +185,17 @@ echo "<center><h2 style='color:green'>Thank you for your feedback</h2></center>"
               echo @$err;
 
                 ?>
-
-                <h3 ><center>Please give your answer about the following question by circling the given grade on the scale:</center></h3><br>
-
-                <div class="row">
-                  <button type="button" style="margin-left: 200px;font-size:10px;color:white;background-color:green;border:2px solid #336600;padding:3px">Strongly Agree 5</button>
-                  <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:Brown;border:2px solid #336600;padding:3px">Agree 4</button>
-                  <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:blue;border:2px solid #336600;padding:3px">Neutral 3</button>
-                  <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:Black;border:2px solid #336600;padding:3px"> Disagree 2</button>
-                  <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:red;border:2px solid #336600;padding:3px">Strongly Disagree 1</button><br>
-
-              </div>
-
             <div class="content" style="margin-top: 8px">
+              <h3 ><center>Please give your answer about the following question by circling the given grade on the scale:</center></h3><br>
+
+              <div class="row">
+                <button type="button" style="margin-left: 200px;font-size:10px;color:white;background-color:green;border:2px solid #336600;padding:3px">Strongly Agree 5</button>
+                <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:Brown;border:2px solid #336600;padding:3px">Agree 4</button>
+                <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:blue;border:2px solid #336600;padding:3px">Neutral 3</button>
+                <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:Black;border:2px solid #336600;padding:3px"> Disagree 2</button>
+                <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:red;border:2px solid #336600;padding:3px">Strongly Disagree 1</button><br>
+
+            </div>
                 <div class="container-fluid">
                     <div class="row panel panel-default">
                         <div class="col-md-12">

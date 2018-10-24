@@ -11,12 +11,16 @@ function deletes(id)
 
 <?php
 error_reporting(1);
+
 include('../dbconfig.php');
 /*
-if(!isset($_SESSION['user']))
-	{header('location:../home.php');}
-	*/
-	?>
+$user= $_SESSION['user'];
+
+if($user=="")
+{header('location:../home.php');}
+*/
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -54,7 +58,7 @@ if(!isset($_SESSION['user']))
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -86,6 +90,9 @@ if(!isset($_SESSION['user']))
                     <a href="#" class="simple-text">
                         Hello Admin
                      </a>
+
+										 <img src="assets/img/admin.jpeg" style="width:200px;height:180px;border-radius:50%">
+
                      <br>
                      <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px"> -->
 
@@ -93,7 +100,7 @@ if(!isset($_SESSION['user']))
                 <br>
                 <ul class="nav">
                     <li class="active">
-                        <a href="Index1.php">
+                        <a href="index.php">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
@@ -165,26 +172,26 @@ if(!isset($_SESSION['user']))
                       <a class="navbar-brand" href="#">Dashboard</a>
                   </div>
                   <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav navbar-left">
-                          <li>
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <i class="fa fa-dashboard"></i>
-                                  <p class="hidden-lg hidden-md">Dashboard</p>
-                              </a>
-                          </li>
+										<ul class="nav navbar-nav navbar-left">
+												<li>
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+																<i class="fa fa-dashboard"></i>
+																<p class="hidden-lg hidden-md">Dashboard</p>
+														</a>
+												</li>
 
 
-                      </ul>
+										</ul>
 
-                      <ul class="nav navbar-nav navbar-right">
+										<ul class="nav navbar-nav navbar-right">
 
-                          <li>
-                              <a href="logout.php">
-                                  <p>Log out</p>
-                              </a>
-                          </li>
-                          <li class="separator hidden-lg"></li>
-                      </ul>
+												<li>
+														<a href="logout.php">
+																<p>Log out</p>
+														</a>
+												</li>
+												<li class="separator hidden-lg"></li>
+										</ul>
                   </div>
               </div>
           </nav>

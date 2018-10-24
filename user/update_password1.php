@@ -12,16 +12,18 @@ $users=mysqli_fetch_assoc($sql);
 
 <?php
 extract($_POST);
-if(isset($save))
+if(isset($update))
 {
 
 	if($np=="" || $cp=="" || $op=="")
 	{
-	$err="<font color='red'>fill all the fileds first</font>";
+	$err="<font color='blue' size='5px'>fill all the fileds first</font>";
 	}
 	else
 	{
 $op=md5($op);
+
+//echo $op;
 
 $sql=mysqli_query($conn,"select * from user where pass='$op'");
 $r=mysqli_num_rows($sql);
@@ -33,18 +35,18 @@ if($r==true)
 	$np=md5($np);
 	$sql=mysqli_query($conn,"update user set pass='$np' where email='$user'");
 
-	$err="<font color='blue'>Password updated </font>";
+	$err="<font color='blue' size='5px'><center>Password updated </center></font>";
 	}
 	else
 	{
-	$err="<font color='red'>New  password not matched with Confirm Password </font>";
+	$err="<font color='blue' size='5px'><center>New  password not matched with Confirm Password</center> </font>";
 	}
 }
 
 else
 {
 
-$err="<font color='red'>Wrong Old Password </font>";
+$err="<font color='blue' size='5px'><center>Wrong Old Password </center></font>";
 
 }
 }
@@ -134,14 +136,14 @@ $err="<font color='red'>Wrong Old Password </font>";
 	                        </a>
 	                    </li>
 	                    <li>
-	                        <a href="user.php">
+	                        <a href="update_profile1.php">
 	                            <i class="pe-7s-user"></i>
-	                            <p>User Profile</p>
+	                            <p>View/Edit Profile</p>
 	                        </a>
 	                    </li>
 
 	                    <li>
-	                          <a href="update_password.php">
+	                          <a href="update_password1.php">
 	                             <i class="pe-7s-lock"></i>
 	                             <p>Update Password </p>
 	                          </a>
@@ -186,29 +188,7 @@ $err="<font color='red'>Wrong Old Password </font>";
 	                      </ul>
 
 	                      <ul class="nav navbar-nav navbar-right">
-	                          <li>
-	                              <a href="">
-	                                  <p>Account</p>
-	                              </a>
-	                          </li>
-	                          <li class="dropdown">
-	                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-	                                  <p>
-	                                      Dropdown
-	                                      <b class="caret"></b>
-	                                  </p>
 
-	                              </a>
-	                              <ul class="dropdown-menu">
-	                                  <li><a href="#">Action</a></li>
-	                                  <li><a href="#">Another action</a></li>
-	                                  <li><a href="#">Something</a></li>
-	                                  <li><a href="#">Another action</a></li>
-	                                  <li><a href="#">Something</a></li>
-	                                  <li class="divider"></li>
-	                                  <li><a href="#">Separated link</a></li>
-	                              </ul>
-	                          </li>
 	                          <li>
 	                              <a href="logout.php">
 	                                  <p>Log out</p>
@@ -271,7 +251,7 @@ $err="<font color='red'>Wrong Old Password </font>";
 
                                           </div>
 
-                                          <input type="submit" class="btn btn-warning" value="Update My Profile" name="update"/>
+                                          <input type="submit" class="btn btn-warning" value="Update My Password" name="update"/>
                                          <input type="reset" class="btn btn-info" value="Reset"/>
 
 

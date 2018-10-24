@@ -5,9 +5,10 @@ include('../dbconfig.php');
 	extract($_POST);
 
 	$user= $_SESSION['faculty_login'];
+
 	if($user=="")
 	{header('location:../home.php');}
-	
+
 	if(isset($save))
 	{
 
@@ -59,7 +60,7 @@ $users=mysqli_fetch_assoc($con);
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -105,7 +106,7 @@ $users=mysqli_fetch_assoc($con);
                     <li>
                         <a href="Update_profile1.php">
                             <i class="pe-7s-user"></i>
-                            <p>Update Profile</p>
+                            <p>View/Edit Profile</p>
                         </a>
                     </li>
 

@@ -22,18 +22,25 @@ $pro = $_POST["pro"];
 $sem = $_POST["sem"];
 $gen = $_POST["gen"];
 $dob = $_POST["dob"];
+//$img = $_POST["img"];
+//$img = $_FILES['img']['name'];
 
-//$imageName = $_FILES['img']['name'];
+ if(strlen($mob)<10 || strlen($mob)>10)
+{
+$err="<font color='blue' size='5px'><center>Mobile number must be 10 digit</center></font>";
+}
 
-$query="update user set name='$n',email='$e',mobile='$mob',programme='$pro',semester='$sem',gender='$gen',dob='$dob' where email='".$_SESSION['user']."'";
+else
+{
+  $query="update user set name='$n',email='$e',mobile='$mob',programme='$pro',semester='$sem',gender='$gen',dob='$dob' where email='".$_SESSION['user']."'";
 
 //$query="insert into user values('','$n','$e','$pass','$mob','$gen','$hob','$imageName','$dob',now())";
 mysqli_query($conn,$query);
 
 
 
-$err="<font color='red'>Profie updated successfully !!</font>";
-
+$err="<font color='blue' size='5px'><center>Profie updated successfully !!</center></font>";
+}
 
 }
 
@@ -127,7 +134,7 @@ $res=mysqli_fetch_assoc($sql);
                     <li>
                         <a href="update_profile1.php">
                             <i class="pe-7s-user"></i>
-                            <p>User Profile</p>
+                            <p>View/Edit Profile</p>
                         </a>
                     </li>
 
@@ -177,29 +184,7 @@ $res=mysqli_fetch_assoc($sql);
                       </ul>
 
                       <ul class="nav navbar-nav navbar-right">
-                          <li>
-                              <a href="">
-                                  <p>Account</p>
-                              </a>
-                          </li>
-                          <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <p>
-                                      Dropdown
-                                      <b class="caret"></b>
-                                  </p>
 
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li><a href="#">Action</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something</a></li>
-                                  <li class="divider"></li>
-                                  <li><a href="#">Separated link</a></li>
-                              </ul>
-                          </li>
                           <li>
                               <a href="logout.php">
                                   <p>Log out</p>

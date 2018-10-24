@@ -58,7 +58,7 @@ echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -104,7 +104,7 @@ echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
                     <li>
                         <a href="Update_profile1.php">
                             <i class="pe-7s-user"></i>
-                            <p>User Profile</p>
+                            <p>View/Edit Profile</p>
                         </a>
                     </li>
 

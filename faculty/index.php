@@ -1,13 +1,11 @@
-
-
 <?php
 session_start();
 include('../dbconfig.php');
-error_reporting(1);
 
 $user= $_SESSION['faculty_login'];
 if($user=="")
 {header('location:../home.php');}
+
 $sql=mysqli_query($conn,"select * from faculty where email='$user' ");
 $users=mysqli_fetch_assoc($sql);
 ?>
@@ -49,7 +47,7 @@ $users=mysqli_fetch_assoc($sql);
     <style>
 
       .main-panel{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -87,7 +85,7 @@ $users=mysqli_fetch_assoc($sql);
                     <li>
                         <a href="Update_profile1.php">
                             <i class="pe-7s-user"></i>
-                            <p>Update Profile</p>
+                            <p>View/Edit Profile</p>
                         </a>
                     </li>
 

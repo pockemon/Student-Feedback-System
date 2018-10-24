@@ -21,7 +21,7 @@ $q=mysqli_query($conn,"select * from feedback");
 $r=mysqli_num_rows($q);
 if($r==false)
 {
-echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
+echo "<font color='blue' size='5px'><center><center>No any records found ! </center></font>";
 }
 else
 {
@@ -63,7 +63,7 @@ else
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -95,6 +95,9 @@ else
                     <a href="#" class="simple-text">
                         Hello Admin
                      </a>
+
+										 <img src="assets/img/admin.jpeg" style="width:200px;height:180px;border-radius:50%">
+
                      <br>
                      <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px"> -->
 
@@ -102,7 +105,7 @@ else
                 <br>
                 <ul class="nav">
                     <li class="active">
-                        <a href="Index1.php">
+                        <a href="index.php">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
@@ -174,23 +177,26 @@ else
                       <a class="navbar-brand" href="#">Dashboard</a>
                   </div>
                   <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav navbar-left">
-                          <li>
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <i class="fa fa-dashboard"></i>
-                                  <p class="hidden-lg hidden-md">Dashboard</p>
-                              </a>
-                          </li>
-
-													<li>
-															<a href="logout.php">
-																	<p>Log out</p>
-															</a>
-													</li>
+										<ul class="nav navbar-nav navbar-left">
+												<li>
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+																<i class="fa fa-dashboard"></i>
+																<p class="hidden-lg hidden-md">Dashboard</p>
+														</a>
+												</li>
 
 
-                      </ul>
+										</ul>
 
+										<ul class="nav navbar-nav navbar-right">
+
+												<li>
+														<a href="logout.php">
+																<p>Log out</p>
+														</a>
+												</li>
+												<li class="separator hidden-lg"></li>
+										</ul>
 
                   </div>
               </div>

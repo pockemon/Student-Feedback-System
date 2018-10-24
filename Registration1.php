@@ -14,6 +14,11 @@ if($r==true)
 {
 $err= "<font color='red'><h3 align='center'>This user already exists</h3></font>";
 }
+
+else if(strlen($mob)<10 || strlen($mob)>10)
+{
+$err="<font color='red'><center>Mobile number must be 10 digit</center></font>";
+}
 else
 {
 
@@ -160,7 +165,7 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" id="inputMob" style="color:white;font-size: 1.2em" placeholder="Mobile Number" name="mob" required>
+                <input type="text" class="form-control" id="inputMob" style="color:white;font-size: 1.2em" placeholder="Mobile Number" maxlength="10" name="mob" required>
             </div>
 
             <div class="form-group">

@@ -13,7 +13,7 @@
 
       mysqli_query($conn,"update faculty set Name='$n',designation	='$desg',programme='$prg',semester='$sem',mobile='$mob',	password='$pass' where id='".$_GET['id']."'");
 
-     $err="<font color='green'><center>Faculty Details updated</center></font>";
+     $err="<font color='blue' size='5px'><center>Faculty Details updated</center></font>";
 
       }
 
@@ -59,7 +59,7 @@
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -91,6 +91,9 @@
                     <a href="#" class="simple-text">
                         Hello Admin
                      </a>
+
+                     <img src="assets/img/admin.jpeg" style="width:200px;height:180px;border-radius:50%">
+
                      <br>
                      <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px"> -->
 
@@ -98,7 +101,7 @@
                 <br>
                 <ul class="nav">
                     <li class="active">
-                        <a href="Index1.php">
+                        <a href="index.php">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
@@ -170,26 +173,26 @@
                       <a class="navbar-brand" href="#">Dashboard</a>
                   </div>
                   <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav navbar-left">
-                          <li>
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <i class="fa fa-dashboard"></i>
-                                  <p class="hidden-lg hidden-md">Dashboard</p>
-                              </a>
-                          </li>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                                <p class="hidden-lg hidden-md">Dashboard</p>
+                            </a>
+                        </li>
 
 
-                      </ul>
+                    </ul>
 
-                      <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
 
-                          <li>
-                              <a href="logout.php">
-                                  <p>Log out</p>
-                              </a>
-                          </li>
-                          <li class="separator hidden-lg"></li>
-                      </ul>
+                        <li>
+                            <a href="logout.php">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+                        <li class="separator hidden-lg"></li>
+                    </ul>
                   </div>
               </div>
           </nav>

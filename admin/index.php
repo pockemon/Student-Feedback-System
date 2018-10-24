@@ -3,7 +3,9 @@ session_start();
 
 include('../dbconfig.php');
 
-if(!isset($_SESSION['user']))
+//echo $_SESSION['admin'];
+
+if(!isset($_SESSION['admin']))
 {header('location:../home.php');}
 
 ?>
@@ -46,7 +48,7 @@ if(!isset($_SESSION['user']))
     <style>
 
       .main-panel{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -67,6 +69,8 @@ if(!isset($_SESSION['user']))
                     <a href="#" class="simple-text">
                         Hello Admin
                      </a>
+                     <img src="assets/img/admin.jpeg" style="width:200px;height:180px;border-radius:50%">
+
                      <br>
                      <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px"> -->
 
@@ -74,7 +78,7 @@ if(!isset($_SESSION['user']))
                 <br>
                 <ul class="nav">
                     <li class="active">
-                        <a href="Index1.php">
+                        <a href="index.php">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
@@ -146,26 +150,26 @@ if(!isset($_SESSION['user']))
                         <a class="navbar-brand" href="#">Dashboard</a>
                     </div>
                     <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-dashboard"></i>
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
+                      <ul class="nav navbar-nav navbar-left">
+                          <li>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-dashboard"></i>
+                                  <p class="hidden-lg hidden-md">Dashboard</p>
+                              </a>
+                          </li>
 
 
-                        </ul>
+                      </ul>
 
-                        <ul class="nav navbar-nav navbar-right">
+                      <ul class="nav navbar-nav navbar-right">
 
-                            <li>
-                                <a href="logout.php">
-                                    <p>Log out</p>
-                                </a>
-                            </li>
-                            <li class="separator hidden-lg"></li>
-                        </ul>
+                          <li>
+                              <a href="logout.php">
+                                  <p>Log out</p>
+                              </a>
+                          </li>
+                          <li class="separator hidden-lg"></li>
+                      </ul>
                     </div>
                 </div>
             </nav>
@@ -216,7 +220,7 @@ if(!isset($_SESSION['user']))
                       //all emegency compalints
                       $q=mysqli_query($conn,"select * from user");
                       $r1=mysqli_num_rows($q);
-                      echo "<h2 style='color:orange'>Total Number of Student : $r1</h2>";
+                      echo "<h2 style='color:  #ff3399'>Total Number of Student : $r1</h2>";
 
 
                       //all users

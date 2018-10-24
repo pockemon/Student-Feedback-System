@@ -60,17 +60,17 @@ session_start();
 					<img src="images/image2.jpg" alt="" / style="height:500px">
 					<div class="inner">
 						<header>
-							<p>A free responsive web site template by <a href="https://templated.co">TEMPLATED</a></p>
-							<h2>Hielo</h2>
+							<p></p>
+							<h2></h2>
 						</header>
 					</div>
 				</article>
 				<article>
-					<img src="images/image1.jpg" alt="" />
+					<img src="images/bg3.jpeg" alt="" />
 					<div class="inner">
 						<header>
-							<p>Lorem ipsum dolor sit amet nullam feugiat</p>
-							<h2>Magna etiam</h2>
+							<p></p>
+							<h2></h2>
 						</header>
 					</div>
 				</article>
@@ -78,8 +78,8 @@ session_start();
 					<img src="images/image4.jpg"  alt="" />
 					<div class="inner">
 						<header>
-							<p>Sed cursus aliuam veroeros lorem ipsum nullam</p>
-							<h2>Tempus dolor</h2>
+							<p></p>
+							<h2></h2>
 						</header>
 					</div>
 				</article>

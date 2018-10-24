@@ -7,9 +7,9 @@
 	{
 $que=mysqli_query($conn,"select user and pass from admin where user='$email' and pass='$pass'");
 		$row=mysqli_num_rows($que);
-		if($row)
+		if($row==true)
 			{
-				$_SESSION['user']=$email;
+				$_SESSION['admin']=$email;
 				header('location: admin');
 			}
 		else

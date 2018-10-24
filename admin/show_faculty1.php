@@ -57,7 +57,7 @@ if(!isset($_SESSION['user']))
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -89,6 +89,8 @@ if(!isset($_SESSION['user']))
                     <a href="#" class="simple-text">
                         Hello Admin
                      </a>
+										 <img src="assets/img/admin.jpeg" style="width:200px;height:180px;border-radius:50%">
+
                      <br>
                      <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px"> -->
 
@@ -96,7 +98,7 @@ if(!isset($_SESSION['user']))
                 <br>
                 <ul class="nav">
                     <li class="active">
-                        <a href="Index1.php">
+                        <a href="index.php">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
@@ -168,26 +170,26 @@ if(!isset($_SESSION['user']))
                       <a class="navbar-brand" href="#">Dashboard</a>
                   </div>
                   <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav navbar-left">
-                          <li>
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <i class="fa fa-dashboard"></i>
-                                  <p class="hidden-lg hidden-md">Dashboard</p>
-                              </a>
-                          </li>
+										<ul class="nav navbar-nav navbar-left">
+												<li>
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+																<i class="fa fa-dashboard"></i>
+																<p class="hidden-lg hidden-md">Dashboard</p>
+														</a>
+												</li>
 
 
-                      </ul>
+										</ul>
 
-                      <ul class="nav navbar-nav navbar-right">
+										<ul class="nav navbar-nav navbar-right">
 
-                          <li>
-                              <a href="logout.php">
-                                  <p>Log out</p>
-                              </a>
-                          </li>
-                          <li class="separator hidden-lg"></li>
-                      </ul>
+												<li>
+														<a href="logout.php">
+																<p>Log out</p>
+														</a>
+												</li>
+												<li class="separator hidden-lg"></li>
+										</ul>
                   </div>
               </div>
           </nav>
@@ -201,14 +203,14 @@ if(!isset($_SESSION['user']))
             <div class="content" >
                 <div class="container-fluid">
                     <div class="row panel panel-default" style="width: 1200px">
-                        <div class="col-md-12">
-                            <div class="card">
+                        <div class="col-md-12" >
+                            <div class="card" style="padding: 10px">
                                 <div class="header">
                                     <h4 class="title" style="color:orange">Manage Faculty</h4>
                                 </div>
-                                <div class="content">
+                                <div class="content" style="padding: 10px">
 
-                                        <div class="row">
+                                        <div class="row" style="padding: 10px">
 
                                           <?php
                                           	echo "<table class='table table-responsive table-bordered table-striped table-hover' style=margin:15px;>";
@@ -225,7 +227,6 @@ if(!isset($_SESSION['user']))
                                           	echo "<th>Password</th>";
                                           	echo "<th>Update</th>";
                                           	echo "<th>Delete</th>";
-                                          	echo "<th>Status</th>";
                                           	echo "</tr>";
 
                                           	$i=1;
@@ -250,14 +251,7 @@ if(!isset($_SESSION['user']))
 
 
 
-                                          		if($row['status'])
-                                          		{
-                                          		echo "<td><a href='update_status.php?user_id=".$row['id']."&status=".$row['status']."'><i class='pe-7s-user' style='color:red'></i> </a></td>";
-                                          		}
-                                          		else
-                                          		{
-                                          		echo "<td><a href='update_status.php?user_id=".$row['id']."&status=".$row['status']."'><i class='pe-7s-user' style='color:green'></i></a></td>";
-                                          		}
+
                                           		echo "</tr>";
                                           		$i++;
                                           	}

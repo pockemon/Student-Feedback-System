@@ -1,8 +1,9 @@
 <?php
 include('../dbconfig.php');
+
+//echo $_SESSION['admin'];
 /*
-$user= $_SESSION['user'];
-if($user=="")
+if(!isset($_SESSION['admin']))
 {header('location:../home.php');}
 */
 	extract($_POST);
@@ -10,7 +11,7 @@ if($user=="")
 	{
 		if(strlen($mob)<10 || strlen($mob)>10)
 		{
-		$err="<font color='red'><center>Mobile number must be 10 digit</center></font>";
+		$err="<font color='blue' size='5px'><center>Mobile number must be 10 digit</center></font>";
 		}
 		else
 		{
@@ -23,7 +24,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
 	$r=mysqli_num_rows($q);
 	if($r)
 	{
-	$err="<font color='red'><center>This email already exists choose diff email.</center></font>";
+	$err="<font color='blue' size='5px'><center>This email already exists choose diff email.</center></font>";
 	}
 	else
 	{
@@ -37,7 +38,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
     mail($email,$subject,$message,$headers);
 		*/
 
-	$err="<font color='green'><center>New Faculty Successfully Added.</center></font>";
+	$err="<font color='blue' size='5px'><center>New Faculty Successfully Added.</center></font>";
 	}
 	}
 }
@@ -80,7 +81,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
     <style>
 
       .wrapper{
-        background-image: url('assets/img/dbbg4.jpeg');
+        background-image: url('assets/img/image7.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -112,6 +113,9 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
                     <a href="#" class="simple-text">
                         Hello Admin
                      </a>
+
+										 <img src="assets/img/admin.jpeg" style="width:200px;height:180px;border-radius:50%">
+
                      <br>
                      <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px"> -->
 
@@ -119,7 +123,7 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
                 <br>
                 <ul class="nav">
                     <li class="active">
-                        <a href="Index1.php">
+                        <a href="index.php">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
