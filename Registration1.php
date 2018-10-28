@@ -29,20 +29,24 @@ else
 //$hob=implode(",",$hob);
 
 //image
-$imageName=$_FILES['img']['name'];
+$image=$_FILES['image']['name'];
+//$image = $_FILES['image']['name'];
 
+$target = "images/".basename($image);
 
 //encrypt your password
 $pass=md5($p);
 
 
-$query="insert into user values('','$n','$e','$pass','$mob','$pro','$sem','$gen','$imageName','$yy',now())";
+$query="insert into user values('','$n','$e','$pass','$mob','$pro','$sem','$gen','$image','$yy',now())";
+
 mysqli_query($conn,$query);
 
 //upload image
 
 mkdir("images/$e");
-move_uploaded_file($_FILES['img']['tmp_name'],"images/$e/".$_FILES['img']['name']);
+
+move_uploaded_file($_FILES['image']['tmp_name'],"images/$e/".$_FILES['image']['name']);
 
 
 $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
@@ -211,7 +215,11 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 
 							<div class="form-group">
 
-								<input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="img" required>
+                <input type="hidden" name="size" value="1000000">
+
+            	  <input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="image" required>
+
+							<!--	<input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="img" required> -->
 
 
 							</div>

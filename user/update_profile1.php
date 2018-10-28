@@ -120,7 +120,7 @@ $res=mysqli_fetch_assoc($sql);
                     <a href="#" class="simple-text">
                         Hello <?php echo $users['name'];?>
                 </a>
-                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $users['image'] ).'" style="width:200px;height:180px;border-radius:50%"/>'; ?>
+                <img src = "../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:200px;height:180px;border-radius:50%">
 
                 </div>
 
@@ -311,7 +311,7 @@ $res=mysqli_fetch_assoc($sql);
 
                         <div class="col-md-4" style="margin-top: 20px">
 
-                          <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $users['image'] ).'" style="width:300px;height:300px"/>'; ?>
+                          <img src = "../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:350px;height:400px">
                           <br>
                           <br>
 
