@@ -258,7 +258,7 @@ $users=mysqli_fetch_assoc($con);
                                                 <div class="form-group">
 
                                                     <label>Password</label>
-                                                    <input type="text" class="form-control" id="inputDate" style="font-size: 16px" placeholder="password" value="<?php echo @$users['password'];?>"  name="pass"  required>
+                                                    <input type="text" class="form-control" id="inputDate" style="font-size: 16px" placeholder="password" value="<?php echo @$users['password'];?>"  name="pass">
 
                                                 </div>
                                             </div>

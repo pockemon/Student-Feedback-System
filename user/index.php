@@ -75,20 +75,7 @@ $users=mysqli_fetch_assoc($sql);
                      <br>
                      <img src = "../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:200px;height:180px;border-radius:50%">
 
-                     <?php
-                     //header("Content-type: image/gif");
-                     //$data = $users['image'];
-                     //echo base64_decode($data);
-                    // $output = $users['image'];
-                    // $mystr = base64_decode($output,'image/jpeg');
-                     //echo base64_decode($output);
-                  //   echo "<img src=data:image/jpeg;base64,$mystr>"
-                      //$email = $users['email'];
-                      //echo "<img src= 'images/'.'$users[email]'./.'$users[image].' style='width:200px;height:180px;border-radius:50%'/>";
-
-                     //echo '<img src="data:image/jpg;base64,'.base64_encode( $users['image'] ).'" style="width:200px;height:180px;border-radius:50%"/>';
-                     ?>
-
+                    
                 </div>
 
                 <ul class="nav">

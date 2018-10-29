@@ -181,13 +181,14 @@ echo "<font color='blue' size='5px'><center>Thank you for your feedback</h2></ce
           </nav>
 
 
-          <form method="post">
-            <div style="color: red "><?php
 
-              echo @$err;
-
-                ?>
             <div class="content" style="margin-top: 8px">
+              <form method="post">
+                <div style="color: red "><?php
+
+                  echo @$err;
+
+                    ?>
               <h3 ><center>Please give your answer about the following question by circling the given grade on the scale:</center></h3><br>
 
               <div class="row">
@@ -198,6 +199,7 @@ echo "<font color='blue' size='5px'><center>Thank you for your feedback</h2></ce
                 <button type="button" style="margin-left: 20px;font-size:10px;color:white;background-color:red;border:2px solid #336600;padding:3px">Strongly Disagree 1</button><br>
 
             </div>
+
                 <div class="container-fluid">
                     <div class="row panel panel-default">
                         <div class="col-md-12">
@@ -359,15 +361,13 @@ echo "<font color='blue' size='5px'><center>Thank you for your feedback</h2></ce
                         </div>
                       </div>
                 </div>
+              </form>
+              </div>
+              </div>
+
             </div>
-          </div>
 
-        </form>
-
-
-
-        </div>
-    </div>
+</div>
 
 
 </body>

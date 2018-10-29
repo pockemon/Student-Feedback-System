@@ -186,8 +186,6 @@ echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
 
                                           	<tr class="success">
                                           		<th>Sr.No</th>
-                                          		<th>Student</th>
-                                          		<th>Teacher</th>
                                           		<th>Quest1</th>
                                           		<th>Quest2</th>
                                           		<th>Quest3</th>
@@ -207,24 +205,47 @@ echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
 
                                           		<?php
                                           		$i=1;
+                                              $s1=0;
+                                              $s2=0;
+                                              $s3=0;
+                                              $s4=0;
+                                              $s5=0;
+                                              $s6=0;
+                                              $s7=0;
+                                              $s8=0;
+                                              $s9=0;
+                                              $s10=0;
+                                              $s11=0;
+                                              $s12=0;
                                           	while($row=mysqli_fetch_array($q))
                                           		{
                                           			echo "<tr style='color:black'>";
                                           			echo "<td style='color:black'>".$i."</td>";
-                                          			echo "<td>".Anonymous."</td>";
-                                          			echo "<td>".$row[2]."</td>";
+
                                           			echo "<td>".$row[3]."</td>";
+                                                $s1+=$row[3];
                                           			echo "<td>".$row[4]."</td>";
+                                                $s2+=$row[4];
                                           			echo "<td>".$row[5]."</td>";
-                                          			echo "<td>".$row[6]."</td>";
-                                          			echo "<td>".$row[7]."</td>";
-                                          			echo "<td>".$row[8]."</td>";
-                                          			echo "<td>".$row[9]."</td>";
-                                          			echo "<td>".$row[10]."</td>";
-                                          			echo "<td>".$row[11]."</td>";
-                                          			echo "<td>".$row[12]."</td>";
-                                          			echo "<td>".$row[13]."</td>";
+                                          			$s3+=$row[5];
+                                                echo "<td>".$row[6]."</td>";
+                                          			$s4+=$row[6];
+                                                echo "<td>".$row[7]."</td>";
+                                          			$s5+=$row[7];
+                                                echo "<td>".$row[8]."</td>";
+                                          			$s6+=$row[8];
+                                                echo "<td>".$row[9]."</td>";
+                                          			$s7+=$row[9];
+                                                echo "<td>".$row[10]."</td>";
+                                          			$s8+=$row[10];
+                                                echo "<td>".$row[11]."</td>";
+                                          			$s9+=$row[11];
+                                                echo "<td>".$row[12]."</td>";
+                                          			$s10+=$row[12];
+                                                echo "<td>".$row[13]."</td>";
+                                                $s11+=$row[13];
                                           			echo "<td>".$row[14]."</td>";
+                                                $s12+=$row[14];
                                           			echo "<td>".$row[15]."</td>";
                                           			echo "<td>".$row[16]."</td>";
                                           			//echo "<td><a href='#' onclick='deletes($row[id])'>Delete</a></td>";
@@ -233,6 +254,33 @@ echo "<h3 style='color:Red'><center>No any records found ! </center></h3>";
                                           		}
 
                                           		?>
+
+                                              <tr style='color:black'>
+
+
+                                                <td style='color:black'>Average</td>
+
+                                                <td> <?php echo (int)($s1/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s2/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s3/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s4/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s5/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s6/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s7/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s8/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s9/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s10/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s11/($i-1)); ?> </td>
+                                                <td> <?php echo (int)($s12/($i-1)); ?> </td>
+
+                                                <td> ---  </td>
+                                                <td>  --- </td>
+
+
+                                              </tr>
+
+
+
 
                                           </table>
 

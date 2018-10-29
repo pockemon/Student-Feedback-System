@@ -42,13 +42,10 @@ else
 //$query="insert into user values('','$n','$e','$pass','$mob','$gen','$hob','$imageName','$dob',now())";
 mysqli_query($conn,$query);
 
-//move_uploaded_file($_FILES['image']['tmp_name'],"images/$e/".$_FILES['image']['name']);
-
 $err="<font color='blue' size='5px'><center>Profie updated successfully !!</center></font>";
 }
 
 }
-
 
 //select old data
 //check user alereay exists or not
@@ -324,7 +321,7 @@ $res=mysqli_fetch_assoc($sql);
 
                               <label>Change the profile image</label>
 
-                              <input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="image" required>
+                              <input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="image">
 
                           </div>
 

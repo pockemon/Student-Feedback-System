@@ -3,9 +3,6 @@ session_start();
 include('../dbconfig.php');
 error_reporting(0);
 
-
-//echo $_SESSION['admin'];
-
 if(!isset($_SESSION['admin']))
 {header('location:../home.php');}
 
@@ -23,9 +20,10 @@ if(!isset($_SESSION['admin']))
 		$temp1=substr($mob,0,4);
 		$user_name=$temp.$temp1;
 
-$q=mysqli_query($conn,"select * from faculty where email='$email'");
-	$r=mysqli_num_rows($q);
-	if($r)
+    $q=mysqli_query($conn,"select * from faculty where email='$email'");
+	  $r=mysqli_num_rows($q);
+
+		if($r)
 		{
 			  $q1=mysqli_query($conn,"select * from faculty where email='$email' and programme='$prg' and semester='$sem'");
 				$r1=mysqli_num_rows($q1);

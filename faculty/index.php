@@ -71,8 +71,7 @@ $users=mysqli_fetch_assoc($sql);
                         Hello <?php echo $users['Name'];?>
                      </a>
                      <br>
-                     <!--<img src = "../../images/<?php echo $users['email']; ?>/<?php echo $users['image']; ?>" style="width:100px; height:500px">
-                     <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $users['image'] ).'" style="width:200px;height:180px;border-radius:50%"/>'; ?> -->
+                    
                      <img src="images_f/f1.jpeg" style="width:200px;height:180px;border-radius:50%">
 
                 </div>

@@ -1,8 +1,8 @@
 <?php
 session_start();
- require('dbconfig.php');
+require('dbconfig.php');
 
- error_reporting(0);
+error_reporting(0);
 
 extract($_POST);
 if(isset($save))
@@ -24,15 +24,8 @@ $err="<font color='red'><center>Mobile number must be 10 digit</center></font>";
 else
 {
 
-//dob
-//$dob=$."-".$mm."-".$dd
-
-//hobbies
-//$hob=implode(",",$hob);
-
 //image
 $image=$_FILES['image']['name'];
-//$image = $_FILES['image']['name'];
 
 $target = "images/".basename($image);
 
@@ -152,7 +145,7 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
 			</div>
 
     <div class="signup-form" style="padding: 10px 50px 50px 300px">
-    <div class="main-div">
+     <div class="main-div">
       <div class="panel panel-default" style="padding: 30px 25px">
       <!-- <h2 style="margin-top: 10px; margin-bottom: 20px; text-align: center; color:#ffffff">Student Signup</h2> -->
        <form id="signup" method="post" enctype="multipart/form-data">
@@ -250,18 +243,7 @@ $err="<h3 align='center' style='color: blue'>Registration successfull !!<h3>";
     </div>
 
 
-		<!-- Footer
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-			</footer>
-    -->
+
 
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>

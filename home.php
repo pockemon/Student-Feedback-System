@@ -9,9 +9,11 @@ session_start();
     <link rel="icon" type="image/png" href="images/favicon.ico">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Faculty Feedback System</title>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
+
 	</head>
 	<body>
 
@@ -57,37 +59,40 @@ session_start();
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
-					<img src="images/image2.jpg" alt="" / style="height:500px">
+					<img src="images/image2.jpg" alt="" />
 					<div class="inner">
 						<header>
-							<p></p>
-							<h2></h2>
+							<p>Welcome To</p>
+							<h2>Online Feedback System</h2>
 						</header>
 					</div>
 				</article>
 				<article>
 					<img src="images/bg3.jpeg" alt="" />
 					<div class="inner">
-						<header>
-							<p></p>
-							<h2></h2>
-						</header>
+            <header>
+              <p>Creating</p>
+              <h2>A new way to give feedback</h2>
+            </header>
+
 					</div>
 				</article>
 				<article>
 					<img src="images/image4.jpg"  alt="" />
 					<div class="inner">
-						<header>
-							<p></p>
-							<h2></h2>
-						</header>
+            <header>
+              <p>Our moto</p>
+              <h2>We bring changes</h2>
+            </header>
 					</div>
 				</article>
 
 			</section>
 
 
-		
+
+
+
 
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>
