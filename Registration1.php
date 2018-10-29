@@ -2,6 +2,8 @@
 session_start();
  require('dbconfig.php');
 
+ error_reporting(0);
+
 extract($_POST);
 if(isset($save))
 {

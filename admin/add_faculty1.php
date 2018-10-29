@@ -1,11 +1,14 @@
 <?php
+session_start();
 include('../dbconfig.php');
+error_reporting(0);
+
 
 //echo $_SESSION['admin'];
-/*
+
 if(!isset($_SESSION['admin']))
 {header('location:../home.php');}
-*/
+
 	extract($_POST);
 	if(isset($save))
 	{
@@ -23,25 +26,30 @@ if(!isset($_SESSION['admin']))
 $q=mysqli_query($conn,"select * from faculty where email='$email'");
 	$r=mysqli_num_rows($q);
 	if($r)
-	{
-	$err="<font color='blue' size='5px'><center>This email already exists choose diff email.</center></font>";
-	}
-	else
-	{
-		mysqli_query($conn,"insert into faculty values('','$user_name','$name','$Designation','$prg','$sem','$email','$pass','$mob',now(),'0')");
+		{
+			  $q1=mysqli_query($conn,"select * from faculty where email='$email' and programme='$prg' and semester='$sem'");
+				$r1=mysqli_num_rows($q1);
 
- /*
-	$subject ="New User Account Creation";
-	$from="info@phptpoint.com";
-	$message ="User name: ".$user_name." Password ".$pass;
-    $headers = "From:".$from;
-    mail($email,$subject,$message,$headers);
-		*/
+				if($r1)
+				{
+					$err="<font color='blue' size='5px'><center>This faculty has already taken course in this semester.</center></font>";
+				}
+				else
+				{
+					mysqli_query($conn,"insert into faculty values('','$user_name','$name','$Designation','$prg','$sem','$email','$pass','$mob',now(),'0','$course','$code')");
 
-	$err="<font color='blue' size='5px'><center>New Faculty Successfully Added.</center></font>";
+					$err="<font color='blue' size='5px'><center>New Faculty Successfully Added.</center></font>";
+				}
+
+		}
+		else
+		{
+			mysqli_query($conn,"insert into faculty values('','$user_name','$name','$Designation','$prg','$sem','$email','$pass','$mob',now(),'0','$course','$code')");
+
+	   	$err="<font color='blue' size='5px'><center>New Faculty Successfully Added.</center></font>";
+		}
+	 }
 	}
-	}
-}
 
 ?>
 
@@ -261,6 +269,23 @@ $q=mysqli_query($conn,"select * from faculty where email='$email'");
                                                     <input type="number" class="form-control" placeholder="Mobile Number" value="<?php echo @$mob;?>" maxlength="10" name="mob"  required>
                                                 </div>
                                             </div>
+
+																						<div class="col-md-2">
+																							<div class="form-group">
+																									<label>Course Code</label>
+																									<input type="text" class="form-control" placeholder="Course Code" value="<?php echo @$code;?>" name="code"  required>
+																							</div>
+																					</div>
+
+
+
+																					<div class="col-md-4">
+																							<div class="form-group">
+																									<label>Course Name</label>
+																									<input type="text" class="form-control" placeholder="Course" value="<?php echo @$course;?>" name="course"  required>
+																							</div>
+																					</div>
+
                                         </div>
 
                                         <div class="row">

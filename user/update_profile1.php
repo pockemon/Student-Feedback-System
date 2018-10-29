@@ -1,6 +1,9 @@
 <?php
 session_start();
 include('../dbconfig.php');
+
+error_reporting(0);
+
 $user= $_SESSION['user'];
 if($user=="")
 {header('location:../home.php');}
@@ -23,7 +26,9 @@ $sem = $_POST["sem"];
 $gen = $_POST["gen"];
 $dob = $_POST["dob"];
 //$img = $_POST["img"];
-//$img = $_FILES['img']['name'];
+//$image = $_FILES['image']['name'];
+
+//$target = "images/".basename($image);
 
  if(strlen($mob)<10 || strlen($mob)>10)
 {
@@ -37,7 +42,7 @@ else
 //$query="insert into user values('','$n','$e','$pass','$mob','$gen','$hob','$imageName','$dob',now())";
 mysqli_query($conn,$query);
 
-
+//move_uploaded_file($_FILES['image']['tmp_name'],"images/$e/".$_FILES['image']['name']);
 
 $err="<font color='blue' size='5px'><center>Profie updated successfully !!</center></font>";
 }
@@ -318,7 +323,8 @@ $res=mysqli_fetch_assoc($sql);
                           <div class="form-group">
 
                               <label>Change the profile image</label>
-                              <input type="file" class="form-control" id="inputImage" style="font-size: 16px;" placeholder="Image" name="img">
+
+                              <input type="file" class="form-control" id="inputImage" style="color:white;font-size: 1.2em; padding-left: 5px; padding-top: 5px;" placeholder="Image" name="image" required>
 
                           </div>
 

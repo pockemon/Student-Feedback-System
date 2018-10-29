@@ -10,15 +10,16 @@ function deletes(id)
 </script>
 
 <?php
-error_reporting(1);
-
+session_start();
 include('../dbconfig.php');
-/*
-$user= $_SESSION['user'];
+error_reporting(0);
+
+
+$user= $_SESSION['admin'];
 
 if($user=="")
 {header('location:../home.php');}
-*/
+
 
 ?>
 

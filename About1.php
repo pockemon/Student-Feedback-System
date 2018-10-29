@@ -71,32 +71,26 @@
 					<div class="box">
 						<div class="content">
 
-              <p> Here we have developed the a faculty feedback system, which is generally used in the college to rate the faculty based on the performance.
-                  Here we have 2 modules such as administrator, student
-                   Administrator is the one who creates the student account by adding all student info and assigning the username and password.
-                  Admin also checks the result once all students entered the feedback.. </p>
+              <p> Here we have developed the a faculty feedback system, which is generally used in the college to rate the faculty based on the performance. </p>
+
+							<p>
+								The ‘Feedback System’ Approaches all about institutional practices and processes that are taken into consideration, the student’s concerns of the level of the knowledge they
+                receive. The Faculty Feedback System is a management information system for education establishments to manage student data. An Online Student Feedback System is an
+                automatic feedback generation system that provides the proper feedback to the teachers as per the categories like always, poor, usually, very often, sometimes. </p>
+
               <p> Any student who wants to use this website must first create his/her account by registration process.Once he/she is done with registration process he can use this website to
-                  give feedback to their professors.
-                  If you entered the student user and password and selected student option, then it will show all student information and let you enter the feedback based on the subject.
-                  Before we can look into the php code, you need to create a database called "feed" with two tables in it..one as student and another one as take
+                  give feedback to the professor taking courses in their semesters </p>
+
+							<p>
+                  Faculty can also use this website to see all feedback's given to him/her by students under their courses.Admin (HOD) can add faculty and can also remove faculty and
+									he can also see all the feedbacks given by students.
               </p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-			</footer>
-
+	
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/jquery.scrollex.min.js"></script>

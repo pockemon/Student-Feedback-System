@@ -2,6 +2,8 @@
 session_start();
 include('../dbconfig.php');
 
+error_reporting(0);
+
 	extract($_POST);
 
 	$user= $_SESSION['faculty_login'];

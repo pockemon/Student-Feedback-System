@@ -1,11 +1,14 @@
-<?php 
+<?php
+
+error_reporting(0);
+
 extract($_POST);
 if(isset($save))
 {
 
 	if($e=="" || $p=="")
 	{
-	$err="<font color='red'>fill all the fileds first</font>";	
+	$err="<font color='red'>fill all the fileds first</font>";
 	}
 	else
 	{
@@ -39,20 +42,20 @@ $err="<font color='red'>Invalid login details</font>";
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4"><h2>Faculty Login Form</h2></div>
 	</div>
-	
+
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4"><?php echo @$err;?></div>
 	</div>
-	
-	
-	
+
+
+
 	<div class="row" style="margin-top:10px">
 		<div class="col-sm-4">Enter YOur Email</div>
 		<div class="col-sm-5">
 		<input type="email" name="e" class="form-control"/></div>
 	</div>
-	
+
 	<div class="row" style="margin-top:10px">
 		<div class="col-sm-4">Enter YOur Password</div>
 		<div class="col-sm-5">
@@ -62,9 +65,9 @@ $err="<font color='red'>Invalid login details</font>";
 		<div class="col-sm-4"></div>
 		<div class="col-sm-8">
 		<input type="submit" value="Login" name="save" class="btn btn-info"/>
-		
+
 		</div>
 	</div>
-</form>	
+</form>
 </div>
 </div>

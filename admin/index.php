@@ -1,7 +1,8 @@
 <?php
 session_start();
-
 include('../dbconfig.php');
+error_reporting(0);
+
 
 //echo $_SESSION['admin'];
 

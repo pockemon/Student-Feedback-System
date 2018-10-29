@@ -1,7 +1,8 @@
 <?php
 session_start();
 include('../dbconfig.php');
-error_reporting(1);
+
+error_reporting(0);
 
 $user= $_SESSION['faculty_login'];
 if($user=="")
